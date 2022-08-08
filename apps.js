@@ -21,8 +21,7 @@ let counter=0;
 
 function printInfo(a){
 
-let myTable=document.getElementById("div");
-let table = document.createElement('table');
+let tab = document.getElementById('tab');
 
 if (counter===0){
 
@@ -39,9 +38,7 @@ headers.forEach((headerText) => {
     headerRow.appendChild(header);
 });
 
-table.appendChild(headerRow);
-myTable.appendChild(table);
-
+tab.appendChild(headerRow);
 /////////////////////////////////////////////////////////////////
 
 allFood.forEach((emp) => {
@@ -51,27 +48,27 @@ allFood.forEach((emp) => {
         cell.textContent=text;
         row.appendChild(cell);
     })
-    table.appendChild(row);
+    tab.appendChild(row);
+    allFood.pop();
 });
-myTable.appendChild(table);} //end of if statment 
+} //end of if statment 
 
 else{
-allFood.forEach((emp) => {
+allFood.forEach(function (emp) {
     let row = document.createElement('tr');
     Object.values(emp).forEach(text => {
         let cell = document.createElement('td');
-        cell.textContent=text;
+        cell.textContent = text;
         row.appendChild(cell);
-    })
-    table.appendChild(row);
+    });
+    tab.appendChild(row);
+    allFood.pop()
 });
-myTable.appendChild(table);}
+}
 
 
 
-}//end of else statment 
-
-;
+};//end of else statment ;
 
 
 
