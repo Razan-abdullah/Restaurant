@@ -17,37 +17,61 @@ constructor.prototype.creatId=function(counter){ this.foodId=counter+1000;++c;};
 
 ////////////////////////////////////
 
+let counter=0;
 
 function printInfo(a){
 
 let myTable=document.getElementById("div");
+let table = document.createElement('table');
+
+if (counter===0){
 
 console.log("hi from new function //test ");
 
 let headers = ['Food Name', 'Type of Food', 'Price','ID'];
 
-let table = document.createElement('table');
 let headerRow = document.createElement('tr');
-
-headers.forEach(headerText => {
+headers.forEach((headerText) => {
+    ++counter;
     let header = document.createElement('th');
-    let textNode = document.createTextNode(headerText);
-    header.appendChild(textNode);
+    header.id="headerId";
+    header.textContent=headerText;
     headerRow.appendChild(header);
 });
 
 table.appendChild(headerRow);
-allFood.forEach(emp => {
+myTable.appendChild(table);
+
+/////////////////////////////////////////////////////////////////
+
+allFood.forEach((emp) => {
     let row = document.createElement('tr');
     Object.values(emp).forEach(text => {
         let cell = document.createElement('td');
-        let textNode = document.createTextNode(text);
-        cell.appendChild(textNode);
+        cell.textContent=text;
         row.appendChild(cell);
     })
     table.appendChild(row);
 });
-myTable.appendChild(table);};
+myTable.appendChild(table);} //end of if statment 
+
+else{
+allFood.forEach((emp) => {
+    let row = document.createElement('tr');
+    Object.values(emp).forEach(text => {
+        let cell = document.createElement('td');
+        cell.textContent=text;
+        row.appendChild(cell);
+    })
+    table.appendChild(row);
+});
+myTable.appendChild(table);}
+
+
+
+}//end of else statment 
+
+;
 
 
 
