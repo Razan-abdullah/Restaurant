@@ -2,37 +2,60 @@ let allFood=[];
 var c=1;
 function constructor(name,type,price){
 
+this.foodId;
 this.foodName=name;
 this.Type=type;
 this.Price=price;
-
-this.creatId=function(counter){ this.foodId=counter+1000;++c;};
-
-
 this.creatId(c);
-
-console.log(`from constructor : price ${this.Price}`);
-console.log(this.foodId);
-console.log(this.Type);
-console.log(this.foodName);
 allFood.push(this);
-console.table(this);
-
-
-
+printInfo(allFood);
+console.log(c);
 }
 
-constructor.prototype.print=function(this){
+constructor.prototype.creatId=function(counter){ this.foodId=counter+1000;++c;};
 
-    v
-        for(var p in o){
-            console.log(p);
-            }
-        
-    }
-    
 
-}
+////////////////////////////////////
+
+
+function printInfo(a){
+
+let myTable=document.getElementById("div");
+
+console.log("hi from new function //test ");
+
+let headers = ['Food Name', 'Type of Food', 'Price','ID'];
+
+let table = document.createElement('table');
+let headerRow = document.createElement('tr');
+
+headers.forEach(headerText => {
+    let header = document.createElement('th');
+    let textNode = document.createTextNode(headerText);
+    header.appendChild(textNode);
+    headerRow.appendChild(header);
+});
+
+table.appendChild(headerRow);
+allFood.forEach(emp => {
+    let row = document.createElement('tr');
+    Object.values(emp).forEach(text => {
+        let cell = document.createElement('td');
+        let textNode = document.createTextNode(text);
+        cell.appendChild(textNode);
+        row.appendChild(cell);
+    })
+    table.appendChild(row);
+});
+myTable.appendChild(table);};
+
+
+
+
+
+
+////////////////////////////////
+
 
 let form1 =document.getElementById("form");
 form1.addEventListener("submit",handleSubmit);

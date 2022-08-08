@@ -1,0 +1,70 @@
+
+html{
+
+    background-color: bisque;
+}
+
+header {
+    font-family: 'Oleo Script Swash Caps', cursive;  
+    text-align: center;
+    font-size: 60px;
+ 
+    margin: -8px;
+    background-color: blue;
+    color: black;
+}
+body{
+    position: relative;
+}
+button {
+    display: inline-block;
+    padding: 10px 20px;
+}
+table {
+    border:1px;
+    display: block;
+    margin-top: 20px;
+    border: 1px,solid;font-family: 'Oleo Script Swash Caps', cursive;  
+    text-align: center;
+    font-size: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 20px;
+}
+#d1{
+
+background-color: blue;
+width: 100%;
+line-height: -10px;
+
+}
+
+nav{
+    background-color: bisque;
+    margin: -46px;
+    position: absolute;
+    right: 46px;
+    display: block;
+    width: 100% ;
+
+}
+a{
+    text-decoration: none;
+background-color: bisque;
+font-family: 'Oleo Script Swash Caps', cursive;  
+    font-size: 20px;
+    color: blue;
+    
+}
+form{
+    background-color: bisque;
+    font-family: cursive;
+    font-size: 20px;
+
+
+}
+footer{
+
+background-color: bisque;
+}
