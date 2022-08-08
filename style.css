@@ -1,18 +1,23 @@
 
 html{
 
-    background-color: bisque;
+    background-image:url("./restaurant.jpg");
+    background-size: cover;
 }
 
-header {
-    font-family: 'Oleo Script Swash Caps', cursive;  
-    text-align: center;
-    font-size: 60px;
- 
-    margin: -8px;
-    background-color: blue;
-    color: black;
+section{
+
+    padding: 24px;
 }
+header {
+    font-family:'Pacifico', cursive;
+
+
+    text-align: left;
+    font-size: 32px;
+ 
+    margin: 2px;
+    color:rgb(239 234 217)}
 body{
     position: relative;
 }
@@ -24,14 +29,20 @@ table {
     border:1px;
     display: block;
     margin-top: 20px;
-    border: 1px,solid;font-family: 'Oleo Script Swash Caps', cursive;  
+    border: 2px,solid;font-family: 'Oleo Script Swash Caps', cursive;  
     text-align: center;
     font-size: 20px;
+    
+
 }
 th, td {
-    border: 1px solid black;
-    padding: 20px;
+    border: 1px solid white;
+    padding: 20px;  
+    background-color: rgb(1, 19, 16);
+    color:white;
+
 }
+
 #d1{
 
 background-color: blue;
@@ -41,30 +52,50 @@ line-height: -10px;
 }
 
 nav{
-    background-color: bisque;
-    margin: -46px;
+    
+    margin: -50px;
     position: absolute;
-    right: 46px;
+    right: 50px;
     display: block;
-    width: 100% ;
+    width: 100%;
 
 }
 a{
     text-decoration: none;
-background-color: bisque;
-font-family: 'Oleo Script Swash Caps', cursive;  
-    font-size: 20px;
-    color: blue;
-    
+    background-color: bisque;
+    font-family: fantasy;
+    font-size: 17px;
+    color:  rgb(1, 19, 16);
+    margin: 5px;
+    padding: 7px;
+    border-radius: 5px;
 }
 form{
-    background-color: bisque;
+    color: white;
     font-family: cursive;
     font-size: 20px;
+    text-align: left;
 
 
 }
-footer{
 
-background-color: bisque;
+div{
+    font-family: 'Oleo Script Swash Caps', cursive;  
+    text-align:left;
+    font-size: 20px;
+ 
+
+
+}
+
+
+hr {
+
+
+    margin: 10px;
+}
+div{
+
+
+    color:rgb(239 234 217);
 }
