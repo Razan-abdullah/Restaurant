@@ -93,8 +93,3 @@ console.log(price);
 let a=new constructor(Name,type,price);
 
 }
-/*
-let a=new constructor("razan","foos",10.0);
-let form=document.getElementById("form");
-let b=new constructor ("sara","khara",30);
-*/
