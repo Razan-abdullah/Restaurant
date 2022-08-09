@@ -1,4 +1,5 @@
 let allFood=[];
+let allfood2=[];
 var c=1;
 function constructor(name,type,price){
 
@@ -8,6 +9,7 @@ this.Type=type;
 this.Price=price;
 this.creatId(c);
 allFood.push(this);
+allfood2.push(this);
 printInfo(allFood);
 console.log(c);
 }
@@ -15,7 +17,8 @@ console.log(c);
 constructor.prototype.creatId=function(counter){ this.foodId=counter+1000;++c;};
 
 
-////////////////////////////////////
+////////////////////////////////////table ///////////////
+
 
 let counter=0;
 
@@ -62,14 +65,13 @@ allFood.forEach(function (emp) {
         row.appendChild(cell);
     });
     tab.appendChild(row);
-    allFood.pop()
+   allFood.pop()
 });
 }
 
 
 
 };//end of else statment ;
-
 
 
 
@@ -91,5 +93,44 @@ console.log(type);
 console.log(price);
 */
 let a=new constructor(Name,type,price);
+saveData(allfood2);
 
 }
+
+function saveData(data) {
+    let stringObj = JSON.stringify(data);
+    localStorage.setItem("food", stringObj);
+  }
+
+
+function getData() {
+  let retrievedData = localStorage.getItem("food");
+  // console.log(retrievedData);
+
+  let arrayData = JSON.parse(retrievedData);
+
+  console.log(arrayData);
+  //create new instances from the constructor
+  if (arrayData != null) {
+    //how can I prevent print an already existing element in my array
+    
+    //arrayData inside allDrinks array -> dont create new instance for it 
+    for (let i = 0; i < arrayData.length; i++) {
+      new constructor(
+        arrayData[i].foodName,
+        arrayData[i].Type,
+        arrayData[i].Price,
+        arrayData[i].foodId,
+       
+      );
+    }
+  }
+  // let x = new Drink(arrayData.name, arrayData.);
+
+  //for (let i = 0; i < allDrinks.length; i++) {
+    //allDrinks[i].printMenu();
+  //}
+
+ 
+}
+getData();
